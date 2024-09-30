@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../COMPUTING"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	}
+}

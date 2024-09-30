@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(banner.png); 
+    background-size: auto;
+    background-position: center;
+} 
+.navbar{
+	width: 90%;
+	margin-inline: 8px;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10;
+}
+.logo{
+	width: 100px;
+	image-resolution: 9%;
+	margin-inline-start: 20%;
+	cursor: pointer; 
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #302b38;
+	text-transform: uppercase;
+}
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #393437;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+}
+.title{
+	width: 100%;
+	position: absolute;
+	top: 16%;
+	transform: translateY(-50%);
+	text-align: center;
+	color:#2b2a39; 
+}
+.title h1{
+	font-size: 70px;
+	margin-top: 80px;
+	font-style: italic;
+	font-family: sans-serif;
+}
+.title h4{
+	margin-top: 10px;
+}
+:root{
+	--first-color: hsl(82,60%,28%); 
+	--title-color:  hsl(0,0%,15%); 
+	--text-color:  hsl(0,0%,35%); 
+	--body-color:  hsl(0,0%,95%);
+	--container-color:  hsl(0,0%,100%);  
+	--body-font: "Poppins", sans-serif;
+	--h2-font-size: 1.5rem;
+	--small-font-size: .813rem;
+}
+@media screen (min-width: 1120px;) {
+	--h2-font-size: 1.5rem;
+		--small-font-size: .875rem;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: var(--body-font);
+	background-color: var(--body-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	margin-inline: 1.5rem;
+	padding: 20px;
+	padding-block: 5rem;
+	background-image: url(banner.png);
+}
+.card_container{
+	display: flex;
+	row-gap: 7rem;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 20px auto;
+	width: 90%;
+	max-width: 1200px;
+}
+.card_article{
+	position: relative;
+	overflow: hidden;
+}
+.card_img{
+	width: 328px;
+	border-radius: 1.5rem;
+}
+.card_data{
+	width: 280px;
+	background-color: white;
+	padding: 1.5rem 2rem;
+	box-shadow: 0 8px 24px hsl(0, 0%, 0%, .15);
+	border-radius: 1rem;
+	position: absolute;
+	bottom: -6rem;
+	left: 0;
+	right: 0;
+	margin-inline: auto;
+	opacity: 0;
+	transition: opacity 1s 1s;
+}
+.card_desription{
+	display: block;
+	font-size: medium;
+	margin-bottom: .25rem;
+}
+.card_title{
+	font-size: var(--h2-font-size);
+	font-weight: 500;
+	color: var(--title-color);
+	margin-bottom: .75rem;
+
+}
+.card_button{
+	text-decoration: none;
+	font-size: var(--small-font-size);
+	font-weight: 500;
+	color: var(--first-color);
+}
+.card_button:hover{
+	text-decoration: underline;
+}
+.card_article:hover .card_data{
+	animation: show-data 1s forwards;
+	opacity: 1;
+	transition: opacity .3s;
+}
+.card_article:hover{
+	animation: remove-overflow 2s forwards;
+}
+.card_article:not(:hover){
+	animation: show-overflow 2s forwards;
+}
+.card_article:not(:hover) .card_data{
+	animation: remove-data 1s forwards;
+}
+@keyframes show-data{
+	50%{
+		transform: translateY(-10rem);
+	}
+	100%{
+		transform: translateY(-7rem);
+	}
+}
+@keyframes remove-overflow{
+	to{
+		overflow: initial;
+	}
+}	
+
+@keyframes remove-data {
+	0%{
+		transform: translateY(-7rem)
+	}
+	50%{
+		transform: translateY(-10rem)
+	}
+	100%{
+		transform: translateY(.5rem)
+	}
+}
+@keyframes show-overflow{
+	0%{
+		overflow: initial;
+		pointer-events: none;
+	}
+	50%{
+		overflow: hidden;
+	}
+}
+.link {
+   margin-bottom: 100px;
+  text-align: center;	
+  background-color: #dbb756;
+  justify-content: center;
+  color: white ;
+  font-family: cursive;
+}
+.link a{
+	color: #dbdbdb;
+	font-size: larger;
+	font-style: normal;	
+}
+.container h5 {
+	margin-top: -90px;
+   text-align: center;	
+   font-size: smaller;
+   font-family: 'Courier New', Courier, monospace;
+   font-style: italic;
+   color: #ffffff;
+   background-color: #897030;
+   justify-content: center;
+ }
